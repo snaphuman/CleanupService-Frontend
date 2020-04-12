@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,37 +11,35 @@ import PaymentIndex from './Payment/Index';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Servicio doméstico</h1>
-      </header>
-      <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="/register">Registro</Link>
-          </li>
-          <li>
-            <Link to="/contract">Contrato</Link>
-          </li>
-          <li>
-            <Link to="/payment">Pagos</Link>
-          </li>
-        </ul>
-        <Switch>
-          <Route exact path="/register">
-            <RegisterIndex />
-          </Route>
-          <Route path="/contract">
-            <ContractIndex />
-          </Route>
-          <Route path="/payment">
-            <PaymentIndex />
-          </Route>
-        </Switch>
-      </div>
-      </Router>
-    </div>
+        <Router>
+          <div className="pure-menu pure-menu-horizontal">
+            <a className="pure-menu-heading" href="">
+              Servicio doméstico
+            </a>
+            <ul className="pure-menu-list">
+              <li className="pure-menu-item">
+                <Link to="/register" className="pure-menu-link">Registro</Link>
+              </li>
+              <li className="pure-menu-item">
+                <Link to="/contract" className="pure-menu-link">Contrato</Link>
+              </li>
+              <li className="pure-menu-item">
+                <Link to="/payment" className="pure-menu-link">Pagos</Link>
+              </li>
+            </ul>
+          </div>
+          <Switch>
+            <Route exact path="/register">
+              <RegisterIndex />
+            </Route>
+            <Route path="/contract">
+              <ContractIndex />
+            </Route>
+            <Route path="/payment">
+              <PaymentIndex />
+            </Route>
+          </Switch>
+        </Router>
   );
 }
 
