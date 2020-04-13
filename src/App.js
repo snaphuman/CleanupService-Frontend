@@ -12,7 +12,7 @@ import PaymentIndex from './Payment/Index';
 function App() {
   return (
         <Router>
-          <div className="pure-menu pure-menu-horizontal">
+          <div className="pure-menu pure-menu-horizontal pure-menu-scrollable">
             <a className="pure-menu-heading" href="">
               Servicio doméstico
             </a>
@@ -28,17 +28,19 @@ function App() {
               </li>
             </ul>
           </div>
-          <Switch>
-            <Route exact path="/register">
-              <RegisterIndex />
-            </Route>
-            <Route path="/contract">
-              <ContractIndex />
-            </Route>
-            <Route path="/payment">
-              <PaymentIndex />
-            </Route>
-          </Switch>
+          <div className="l-content">
+            <Switch>
+              <Route exact path="/register">
+                <RegisterIndex />
+              </Route>
+              <Route path="/contract">
+                <ContractIndex />
+              </Route>
+              <Route path="/payment">
+                <PaymentIndex />
+              </Route>
+            </Switch>
+          </div>
         </Router>
   );
 }

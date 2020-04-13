@@ -6,17 +6,22 @@ h1,h2,h3,h4,h5,h6 {
     color: #111;
 }
 
+.l-content {
+  margin: 0 auto;
+}
+
 .l-box {
-    padding: 2em;
+  box-sizing: border-box;
+  padding: 1.5em;
 }
 
 .header .pure-menu {
-    border-bottom-color: black;
-    border-radius: 0;
+  border-bottom-color: black;
+  border-radius: 0;
 }
 
 .pure-menu-link {
-    padding: 1em .7em;
+  padding: 1em .7em;
 }
 
 .button-success,
@@ -42,4 +47,45 @@ h1,h2,h3,h4,h5,h6 {
 
 .button-secondary {
   background: rgb(66, 184, 221); /* this is a light blue */
+}
+
+.button-xsmall {
+  font-size: 70%;
+}
+
+.button-small {
+  font-size: 85%;
+}
+
+.button-large {
+  font-size: 110%;
+  padding: 1.3em;
+}
+
+.button-xlarge {
+  font-size: 125%;
+  padding: 1.5em;
+}
+
+.button-fluid {
+  width: 100%;
+}
+/* override default purecss media queries */
+@media (min-width: 35.5em) {
+  .container {
+    width: auto;
+    margin: unset;
+  }
+}
+@media screen and (min-width: 48em) {
+  .container {
+    width: 970px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 64em) {
+
+}
+@media screen and (min-width: 80em) {
+
 }
