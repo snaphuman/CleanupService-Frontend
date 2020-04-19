@@ -174,6 +174,41 @@ h1,h2,h3,h4,h5,h6 {
   transform: translateY(-44px);
 }
 
+.file-field-wrapper {
+  width:100%;
+  height: 100%;
+  display: flex;
+}
+
+.file-field {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  display: flex;
+  position: relative;
+  background: #a9a9a9;
+  color: #2a2a2a;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.file-field span {
+  text-align:center;
+  font-size: 1.5em;
+  padding: 0 25px;
+}
+
+input[type='file']{
+  width: 200px;
+  height: 200px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
 /* override default purecss media queries */
 @media screen and (min-width: 35.5em) {
   .container {
